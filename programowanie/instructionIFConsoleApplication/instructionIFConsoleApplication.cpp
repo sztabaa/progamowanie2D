@@ -118,18 +118,19 @@ void task4()
  {
 	 int day;
 	int month;
+	int year;
 	 cout << "napisz dzieñ miesi¹ca:    ";
 		 cin >> day;
 		 cout << "napisz miesi¹c:     ";
 		 cin >> month;
+		 cout << "napisz rok :         ";
+		 cin >> year;
 		 if (day <= 31 && month <= 12 && day > 0 && month > 0)
 		 {
-			 cout << "ta data jest poprawna";
+		
 		 }
-		 else
-		 {
-			 cout << "data jest z³a";
-		 }
+
+		
 
  }
  //Program wyœwietlaj¹cy odpowiedni komunikat w zale¿noœci od podanej temperatury (np. "ciep³o" dla temperatury powy¿ej 20 stopni Celsjusza, "ch³odno" dla temperatury poni¿ej 10 stopni Celsjusza itd.)
@@ -150,6 +151,55 @@ void task4()
 		 cout << "ch³odno";
 	 }
  }
+ //Program sprawdzj¹cy czy podana liczba jest z przedia³u <1;15)
+ void task9()
+ {
+	 int liczba;
+	 cout << "wprowadz liczbe:   ";
+	 cin >> liczba;
+	 if (liczba >= 1 && liczba < 15)
+	 {
+		 cout << "liczba jest w przedziale";
+	 }
+ }
+ //Program sprawdzaj¹cy czy osoba jest pe³noletnia.
+ void task10()
+ {
+	 int wiek;
+	 cout << "wpisz wiek";
+		 cin >> wiek;
+		 if (wiek >= 18)
+		 {
+			 cout << " osoba jest pe³noletnia";
+		 }
+		 else 
+		 {
+			 cout << " osoba jest niepe³nioletnia";
+		 }
+
+ }
+ //Program, który sprawdzi czy z podanych d³ugoœci boków mo¿na zrobiæ trójk¹t.
+ void task11()
+ {
+	 int bok1;
+	 int bok2;
+	 int bok3;
+	 cout << "podaj pierwszy bok:     ";
+	 cin >> bok1;
+	 cout << "podaj pierwszy bok:     ";
+	 cin >> bok2;
+	 cout << "podaj pierwszy bok:     ";
+	 cin >> bok3;
+	 if ((bok1 < bok2 + bok3)&& (bok2 < bok1 + bok3) && (bok3 < bok1 + bok2))
+	 {
+		 cout << " z podanych boków mo¿na zrobiæ trójk¹t";
+	 }
+	 else
+	 {
+		 cout << " nie da sie z tych boków zrobiæ trójk¹ta";
+	 }
+
+ }
 
 int main()
 {
@@ -161,7 +211,10 @@ int main()
 	//task5();
 	//task6();
 	//task7();
-	task8();
+	//task8();
+	//task9();
+	//task10();
+	task11();
 }
 
 
