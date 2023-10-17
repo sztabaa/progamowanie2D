@@ -201,6 +201,137 @@ void task4()
 
  }
 
+ //Napisz program, który bêdzie dzia³aæ jako prosty kalkulator matematyczny, umo¿liwiaj¹c u¿ytkownikowi wybór operacji (dodawanie, odejmowanie, mno¿enie, dzielenie) i wprowadzanie liczb do obliczeñ.
+  void task12()
+ {
+	  float firstnumber;
+	  float secondnumber;
+	  int sign;
+	  cout << "wprowadz pierwsz¹ liczbe :   ";
+	  cin >> firstnumber;
+	  cout << "wprowadz drug¹ liczbe :   ";
+	  cin >> secondnumber;
+	  cout << "wpisz\n wpisz 1 jeœli chcesz dodaæ liczby\n wpisz 2 jeœli chcesz odj¹æ liczby\n wpisz 3 jeœli chcesz podzieliæ liczby\n wpisz 4 jeœli chcesz pomno¿yæ liczby\n";
+	  cin >> sign;
+
+	  switch (sign)
+	  {
+	  case 1 :
+		  cout << firstnumber + secondnumber;
+		  break;
+	  case 2:
+		  cout << firstnumber - secondnumber;
+		  break;
+	  case 3:
+		  cout << firstnumber/secondnumber;
+		  break;
+	  case 4:
+		  cout << firstnumber * secondnumber;
+		  break;
+	  default:
+		  cout << " jeden ze znaków nie jest liczb¹";
+	  }
+
+
+
+ }
+  //Napisz program, który wczyta numer miesi¹ca i wyœwietli jego s³owny odpowiednik.
+  void task13()
+  {
+	  int miesi¹c;
+	  cout << " wpisz numer miesi¹ca :    ";
+	  cin >> miesi¹c;
+	  
+	  switch (miesi¹c)
+	  {
+	  case 1:
+		  cout << "styczeñ";
+		  break;
+
+	  case 2:
+		  cout << "luty";
+		  break;
+
+	  case 3:
+		  cout << "marzec";
+		  break;
+
+	  case 4:
+		  cout << "kwiecieñ";
+		  break;
+
+	  case 5:
+		  cout << "maj";
+		  break;
+
+	  case 6:
+		  cout << "czerwiec";
+		  break;
+
+	  case 7:
+		  cout << "lipiec ";
+		  break;
+
+	  case 8:
+		  cout << "sierpieñ";
+		  break;
+
+	  case 9:
+		  cout << "wrzesieñ";
+		  break;
+
+	  case 10:
+		  cout << "paŸdziernik";
+		  break;
+
+	  case 11:
+		  cout << "listopad";
+		  break;
+
+	  case 12:
+		  cout << "grudzieñ";
+		  break;
+
+	  default:
+		  cout << " nie ma takiego miesi¹ca";
+	  }
+
+
+
+  }
+
+
+  // Napisz program, który na podstawie wspó³czynników równania kwadratowego (a, b, c) sprawdzi, czy to równanie ma rozwi¹zania rzeczywiste, i jeœli tak, to je obliczy.
+  void task14()
+  {
+	  float a;
+	  float b;
+	  float c;
+	  cout << "wpisz a :   ";
+	  cin >> a;
+	  cout << "wpisz b :   ";
+	  cin >> b;
+	  cout << "wpisz c :   ";
+	  cin >> c;
+	  float delta = b * b - 4 * a * c;
+
+	  if (delta > 0)
+	  {
+		  cout << " s¹ 2 ró¿ne rozwi¹zania :" << -b - sqrt(delta) / 2 * a <<  "oraz"  << -b + sqrt(delta) / 2 * a;
+
+	  }
+	  else if (delta == 0)
+	  {
+		  -b / 2 * a;
+	  }
+	  else 
+	  {
+		  cout << "to równanie nie ma ¿adnego równania";
+	  }
+	  
+
+  }
+
 int main()
 {
 	setlocale(LC_CTYPE, "polish");
@@ -214,7 +345,10 @@ int main()
 	//task8();
 	//task9();
 	//task10();
-	task11();
+	//task11();
+	//task12();
+	//task13();
+	task14();
 }
 
 
