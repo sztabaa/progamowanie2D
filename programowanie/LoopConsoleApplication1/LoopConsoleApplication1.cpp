@@ -86,6 +86,57 @@ void task7()
 		}
 	}
 }
+//Program wyœwietlaj¹cy na ekranie ci¹g Fibonacciego do 20 elementu (ci¹g Fibonacciego to ci¹g gdzie ka¿dy element jest sum¹ dwóch poprzednich, np. 0, 1, 1, 2, 3, 5, 8, 13 itd.)
+void task8()
+{
+	cout << "0 , 1, ";
+
+	int fib2 = 0;
+	int fib1 = 1;
+	for (int i = 0; i < 18; i++)
+	{
+		int fib = fib2 + fib1;
+		std::cout << fib << ", ";
+		fib2 = fib1;
+		fib1 = fib;
+	}
+
+}
+
+
+//Program obliczaj¹cy sumê kwadratów liczb od 1 do 10
+void task9()
+{
+	int sum = 0;
+	for (int i = 1; i <= 10; i++)
+	{
+		sum = (i*i) + i;
+	}
+	cout << "suma kwadratow od 1 do 10 wynosi :  "<< sum ;
+}
+
+//Program, kóry wyœwietli poni¿sze cztery zwory:
+//**** 54321        121212        122333
+//***  65432        212121        223334444
+//**   76543        121212        333444455555
+//    87654        212121        444455555666666
+
+void task10()
+{
+	cout << "przyklad nr 1 \n";
+	
+	for (int i=4 ; i > 0 ; i--)
+	{
+		for (int j = 0 ; j < i ; j++)
+		{
+			cout << "*";
+		}
+		cout <<"\n";
+		}
+	
+}
+
+
 int main()
 {
 	//task1();
@@ -95,4 +146,7 @@ int main()
 	//task5();
 	//task6();
 	//task7();
+	//task8();
+	task9();
+	//task10();
 }
