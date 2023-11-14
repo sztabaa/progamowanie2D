@@ -96,7 +96,7 @@ void task8()
 	for (int i = 0; i < 18; i++)
 	{
 		int fib = fib2 + fib1;
-		std::cout << fib << ", ";
+	    cout << fib << ", ";
 		fib2 = fib1;
 		fib1 = fib;
 	}
@@ -110,7 +110,7 @@ void task9()
 	int sum = 0;
 	for (int i = 1; i <= 10; i++)
 	{
-		sum = (i*i) + i;
+		sum = (i*i) + sum;
 	}
 	cout << "suma kwadratow od 1 do 10 wynosi :  "<< sum ;
 }
@@ -124,17 +124,60 @@ void task9()
 void task10()
 {
 	cout << "przyklad nr 1 \n";
-	
-	for (int i=4 ; i > 0 ; i--)
+
+	for (int i = 4; i > 0; i--)
 	{
-		for (int j = 0 ; j < i ; j++)
+		for (int j = 0; j < i; j++)
 		{
 			cout << "*";
 		}
-		cout <<"\n";
+		cout << "\n";
+	}
+
+	cout << "przyklad numer 2 \n";
+
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 5; j > 0; j--)
+		{
+			cout << j + i;
 		}
+		cout << "\n";
+	}
+
+	cout << "przyklad nr 3 \n";
+
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 6; j++)
+		{
+			cout << (i + j) % 2 +1;
+		}
+		cout << "\n";
+	}
 	
+
+	cout << "przyklad nr 4 \n";
+
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = i +1 ; j <=i + 3; j++)
+		{
+			for (int k = 0; k < j; k++)
+			{
+				cout << j;
+			}
+		}
+		cout << "\n";
+	}
+
 }
+
+void task11()
+{
+
+}
+
 
 
 int main()
@@ -147,6 +190,7 @@ int main()
 	//task6();
 	//task7();
 	//task8();
-	task9();
+	//task9();
 	//task10();
+	task11();
 }
