@@ -171,10 +171,15 @@ void task10()
 		cout << "\n";
 	}
 
-}
-
+// Napisz program, który policzy sumê cyfr podanej przez u¿ytkownika liczby.
 void task11()
 {
+	do()
+	{
+
+	} while ();
+
+
 
 }
 
@@ -191,6 +196,6 @@ int main()
 	//task7();
 	//task8();
 	//task9();
-	//task10();
-	task11();
+	task10();
+	//task11();
 }
