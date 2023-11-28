@@ -81,7 +81,7 @@ void task4()
 	cout << "podaj zdanie do sprawdzenia:   ";
 	cin >> textFromUser;
 
-	for (int i = 0; i < textFromUser.length(); i++)
+	for (int i = 0; i <= textFromUser.length(); i++)
 	{
 		if (textFromUser[i] >= 'A' && textFromUser[i] <= 'Z' || textFromUser[i] >= 'a' && textFromUser[i] <= 'z')
 		{
