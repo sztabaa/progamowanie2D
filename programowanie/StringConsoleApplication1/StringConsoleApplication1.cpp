@@ -55,11 +55,11 @@ void task3()
 	cout << "utwurz haslo \n";
 	cin >> createPassword;
 
-	cout << "zaloguj sie\n";
-	cin >> password;
-
 	do
 	{
+		cout << "zaloguj sie\n";
+		cin >> password;
+
 		if (password == createPassword)
 		{
 			cout << "haslo jest poprawne";
@@ -71,12 +71,52 @@ void task3()
 
 	} while (password != createPassword);
 }
+//Napisz program, który pobiera od u¿ytkownika ci¹g znaków i wyœwietla liczbê samog³osek i spó³g³osek w tym ci¹gu.
+void task4()
+{
+	string textFromUser;
+	int vowel = 0;
+	int consonant = 0;
+
+	cout << "podaj zdanie do sprawdzenia:   ";
+	cin >> textFromUser;
+
+	for (int i = 0; i < textFromUser.length(); i++)
+	{
+		if (textFromUser[i] >= 'A' && textFromUser[i] <= 'Z' || textFromUser[i] >= 'a' && textFromUser[i] <= 'z')
+		{
+			if (textFromUser[i] == 'A'
+				|| textFromUser[i] == 'a'
+				|| textFromUser[i] == 'e'
+				|| textFromUser[i] == 'E'
+				|| textFromUser[i] == 'o'
+				|| textFromUser[i] == 'O'
+				|| textFromUser[i] == 'y'
+				|| textFromUser[i] == 'Y'
+				|| textFromUser[i] == 'u'
+				|| textFromUser[i] == 'U'
+				|| textFromUser[i] == 'I'
+				|| textFromUser[i] == 'i')
+			{
+				vowel++;
+			}
+			else
+			{
+				consonant++;
+			}
+			
+		}
+		
+	}
+	cout << " w tym tekscie jest: \n" << vowel << "samoglosek \n" << consonant << " spolglosek";
+}
 
 int main()
 {
 	//task1();
 	//task2();
-	task3();
+	//task3();
+	task4();
 }
 
 
