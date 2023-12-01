@@ -111,12 +111,44 @@ void task4()
 	cout << " w tym tekscie jest: \n" << vowel << "samoglosek \n" << consonant << " spolglosek";
 }
 
+//* Poproœ u¿ytkownika o wprowadzenie liczby ca³kowitej w systemie dziesiêtnym. Nastêpnie skonwertuj tê liczbê na system dwójkowy (binarny) i wyœwietl wynik.
+void task5()
+{
+	int number;
+	int rest;
+	string binaryNumber;	
+
+	cout << "Podaj liczbe\n";
+	cin >> number;
+
+	do
+	{
+		rest = number % 2;
+		number = number / 2;
+		if (rest == 0)
+			binaryNumber = "0" + binaryNumber;
+		else
+			binaryNumber = "1" + binaryNumber;
+	} while (number != 0);
+
+	cout << "Liczba binarnie " << binaryNumber;
+}
+
+//Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem (czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
+void task6()
+{
+	string textFromUser;
+
+}
+
 int main()
 {
 	//task1();
 	//task2();
 	//task3();
-	task4();
+	//task4();
+	//task5();
+	task6();
 }
 
 
