@@ -138,7 +138,68 @@ void task5()
 void task6()
 {
 	string textFromUser;
+	cout << "Podaj napis\n";
+	cin >> textFromUser;
 
+	string reverseTextFromUser;
+	for (int i = 0; i < textFromUser.length(); i++)
+	{
+		reverseTextFromUser = textFromUser[i] + reverseTextFromUser;
+	}
+
+	if (textFromUser == reverseTextFromUser)
+		cout << "To s³owo jest palindromem\n";
+	else
+		cout << "To s³owo nie jest palindromem\n";
+
+
+}
+
+//Program sprawdzaj¹cy czy podane dwa s³owa s¹ anagramami (czyli takimi, które zawieraj¹ te same litery, ale w innym uk³adzie, np. "klasa" i "salka")
+void task7()
+{
+	string textFromUser1;
+	string textFromUser2;
+
+	cout << "podaj pierwszy tekst:  ";
+	cin >> textFromUser1;
+
+	cout << "podaj drugi tekst:  ";
+	cin >> textFromUser2;
+
+	if (textFromUser1.length() == textFromUser2.length())
+	{
+		for (int i = 0; i < textFromUser1.length(); i++)
+		{
+			for (int j = 0; j < textFromUser2.length(); j++)
+			{
+				if (textFromUser1[i] == textFromUser2[j])
+				{
+					textFromUser2[j] = ' ';
+					break;
+				}
+			}
+		}
+		bool areAllZero = true;
+		for (int i = 0; i < textFromUser1.length(); i++)
+		{
+			if (textFromUser1[i] != ' ')
+			{
+				textFromUser1[i] = false;
+				break;
+			}
+
+			if (areAllZero)
+			{
+				cout << " to jest anagram";
+			}
+			else
+			{
+				"to nie jest anagram";
+			}
+		}
+	
+	}
 }
 
 int main()
@@ -148,7 +209,8 @@ int main()
 	//task3();
 	//task4();
 	//task5();
-	task6();
+	//task6();
+	  task7();
 }
 
 
