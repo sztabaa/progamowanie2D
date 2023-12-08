@@ -202,15 +202,78 @@ void task7()
 	}
 }
 
+
+void task8()
+{
+	string numberOfPesel;
+
+	cout << "podaj numer pesel:   ";
+	cin >> numberOfPesel;
+
+	if (numberOfPesel.length() != 11 )
+	{
+		cout << "pesel musi miec 11 cyfr!!!";
+		return;
+	}
+
+	for (int i = 0; i < 11; i++)
+	{
+		if (numberOfPesel[i] < 48 || numberOfPesel[i] > 57)
+		{
+			cout << " pesel musi zawierac same liczby";
+			return;
+		}
+	}
+	int controlSum =
+		(numberOfPesel[0] - '0') * 1
+		+ (numberOfPesel[1] - '0') * 3
+		+ (numberOfPesel[2] - '0') * 7
+		+ (numberOfPesel[3] - '0') * 9
+		+ (numberOfPesel[4] - '0') * 1
+		+ (numberOfPesel[5] - '0') * 3
+		+ (numberOfPesel[6] - '0') * 7
+		+ (numberOfPesel[7] - '0') * 9
+		+ (numberOfPesel[8] - '0') * 1
+		+ (numberOfPesel[9] - '0') * 3
+		+ (numberOfPesel[10] - '0') * 1;
+	if (controlSum % 10 != 0)
+	{
+		return;
+	}
+	
+
+	int year = (numberOfPesel[0] - '0') * 10 + (numberOfPesel[1] - '0');
+	int month = (numberOfPesel[2] - '0') * 10 + (numberOfPesel[3] - '0');
+	int day = (numberOfPesel[4] - '0') * 10 + (numberOfPesel[5] - '0');
+   
+		
+	if (month < 1 || month > 12 || day < 1 || day > 31)
+	{
+		return;
+	}
+
+	if (numberOfPesel[9] % 2 == 1)
+	{
+		cout << "p³eæ - mê¿czyzna\n";
+	}
+	else
+	{
+		cout << "p³eæ - kobieta \n";
+	}
+		cout << "twoja data urodzin to:   " << day << "." << month << "." << year;
+}
+
 int main()
 {
+	setlocale(LC_CTYPE, "polish");
 	//task1();
 	//task2();
 	//task3();
 	//task4();
 	//task5();
 	//task6();
-	  task7();
+	// task7();
+	task8();
 }
 
 
