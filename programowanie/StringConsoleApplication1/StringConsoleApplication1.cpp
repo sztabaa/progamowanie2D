@@ -238,6 +238,7 @@ void task8()
 		+ (numberOfPesel[10] - '0') * 1;
 	if (controlSum % 10 != 0)
 	{
+		cout << " liczba kontrolna jest nie poprawna";
 		return;
 	}
 	
