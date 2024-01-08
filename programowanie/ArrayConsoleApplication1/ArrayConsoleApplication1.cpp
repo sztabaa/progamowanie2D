@@ -101,11 +101,32 @@ void task4()
             int numberOfOccurences = 0;
             for (int j = 0; j < SIZE_OF_ARRAY; j++)
             {
-                if (numbers[i] == numberFromRange)
+                if (numbers[j] == numberFromRange)
                 {
                     numberOfOccurences++;
                 }
-                cout << "Liczba" << numberFromRange << "wystapila" << numberOfOccurences << "razy\n";
+                cout << "Liczba " << numberFromRange << " wystapila " << numberOfOccurences << "razy\n";
+            }
+        }
+
+        //wersja2
+        cout << "\nWerjsa2\n";
+        int numberOfOccurences[UPPER_RANGE - LOWER_RANGE + 1];
+        for (int i = 0; i < UPPER_RANGE - LOWER_RANGE + 1; i++)
+        {
+            numberOfOccurences[i] = 0;
+        }
+
+        for (int j = 0; j < SIZE_OF_ARRAY; j++)
+        {
+            numberOfOccurences[numbers[j] - LOWER_RANGE]++;
+        }
+
+        for (int i = 0; i < UPPER_RANGE - LOWER_RANGE + 1; i++)
+        {
+            if (numberOfOccurences[i] != 0)
+            {
+                cout << "Liczba " << i + LOWER_RANGE << " wystapila " << numberOfOccurences[i] << " razy\n";
             }
         }
 }
