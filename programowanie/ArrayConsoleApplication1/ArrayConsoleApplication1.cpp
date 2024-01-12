@@ -1,4 +1,4 @@
-using namespace std;
+﻿using namespace std;
 #include <iostream>
 void task1()
 {
@@ -131,10 +131,61 @@ void task4()
         }
 }
 
+void task5()
+{
+    const int UPPER_RANGE = 1000;
+    //wersja 1
+  /*  for (int numberToCheck = 2; numberToCheck <= sqrt(numberToCheck); numberToCheck++)
+    {
+        bool isPrime = true;
+        for (int i = 2; i <= sqrt(numberToCheck); i++)
+        {
+            if (numberToCheck % i == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime)
+        {
+            cout << numberToCheck << " , ";
+        }
+    }*/
+    //wersja 2
+    
+    bool primeNumbers[UPPER_RANGE + 1];
+   
+    for(int i=2 ; i<UPPER_RANGE+1;i++)
+    {
+        primeNumbers[i] = true;
+    }
+
+    for (int i = 2; i < UPPER_RANGE + 1; i++)
+    {
+        if (primeNumbers[i])
+        {
+            for (int j = i + i; j < UPPER_RANGE + 1; j = j + i)
+            {
+                primeNumbers[j] = false;
+            }
+        }
+    }
+
+    for (int i = 2; i < UPPER_RANGE + 1; i++)
+    {
+        if (primeNumbers[i])
+        {
+            cout << i << " , ";
+        }
+    }
+    cout << "\n";
+}
 int main()
 {
+    setlocale(LC_CTYPE, "polish");
    // task1();
     //task3();
-    task4();
+    //task4();
+    task5();
 }
 
