@@ -114,6 +114,23 @@ public:
 
 };
 
+class Account
+{
+private:
+	float accountBalance1;
+
+public:
+};
+
+class Account2
+{
+private:
+	float accountBalance2;
+
+public:
+};
+
+
 
 int main()
 {
@@ -132,8 +149,11 @@ int main()
 
 	//Point secondPoint(15);
 	//cout << "Odleg³oœæ: " << secondPoint.distanceFromCenter() << "\n";
-	Rectrangle firstRectrangle;
+	//Rectrangle firstRectrangle;
 
-	firstRectrangle.InformationAboutRectrangle();
+	//firstRectrangle.InformationAboutRectrangle();
+
+	Account firstAcc;
+	Account2 secondAcc;
 }
 
