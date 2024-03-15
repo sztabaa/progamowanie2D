@@ -215,7 +215,7 @@ int main()
 	cout << "\n";
 	konto1.Payment(4000);
 	konto1.AccountInformation();
-	std::cout << "\n";
+	cout << "\n";
 	konto2.Payment(789);
 	konto2.AccountInformation();
 
