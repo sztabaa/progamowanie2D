@@ -1,4 +1,4 @@
-
+ï»¿
 #include <iostream>
 using namespace std;
 
@@ -35,7 +35,7 @@ public:
 
 	~Point()
 	{
-		cout << "Teraz dzia³a destruktor \n";
+		cout << "Teraz dziaÅ‚a destruktor \n";
 	}
 
 	void setX(int value)
@@ -47,7 +47,7 @@ public:
 		}
 		else
 		{
-			//reakcja na b³¹d
+			//reakcja na bÅ‚Ä…d
 		}
 	}
 
@@ -107,27 +107,73 @@ public:
 
 	void  InformationAboutRectrangle()
 	{
-		cout << "obwód: " << CircutOfRectrangle() << "\n";
+		cout << "obwÃ³d: " << CircutOfRectrangle() << "\n";
 		cout << "pole: " << AreaOfRectrangle() << "\n";
 		
 	 }
 
 };
 
-class Account
+class  Account
 {
 private:
-	float accountBalance1;
+	float accountBalance;
 
 public:
-};
 
-class Account2
-{
-private:
-	float accountBalance2;
+	Account(int money)
+	{
+		accountBalance = money;
+	}
 
-public:
+	~Account()
+	{
+
+	}
+
+	Account(Account& p)
+	{
+		accountBalance = p.accountBalance;
+	}
+
+	int Payment(int howMuchMoney)
+	{
+		accountBalance = accountBalance + howMuchMoney;
+		return accountBalance;
+	}
+
+
+	bool Paycheck(int howMuchMoney)
+	{
+		if (howMuchMoney <= accountBalance)
+		{
+			accountBalance = accountBalance - howMuchMoney;
+			return true;
+		}
+		return false;
+	}
+
+	void AccountInformation()
+	{
+		if (accountBalance >= 0)
+		{
+			cout << "aktualny stan konta wynosi: " << accountBalance;
+		}
+		else
+		{
+			cout << "bÅ‚Ä…d w systemie!!! ";
+		}
+	}
+
+	bool Transfer(int howMuch, Account& target)
+	{
+		if (Paycheck(howMuch))
+		{
+			target.Payment(howMuch);
+			return true;
+		}
+		return false;
+	}
 };
 
 
@@ -144,16 +190,56 @@ int main()
 
 
 
-	//	cout << "Odleg³oœæ:  " << firstPoint.distanceFromCenter() << "\n";
+	//	cout << "OdlegÅ‚oÅ›Ä‡:  " << firstPoint.distanceFromCenter() << "\n";
 	//}
 
 	//Point secondPoint(15);
-	//cout << "Odleg³oœæ: " << secondPoint.distanceFromCenter() << "\n";
+	//cout << "OdlegÅ‚oÅ›Ä‡: " << secondPoint.distanceFromCenter() << "\n";
 	//Rectrangle firstRectrangle;
 
 	//firstRectrangle.InformationAboutRectrangle();
 
-	Account firstAcc;
-	Account2 secondAcc;
-}
 
+
+	Account konto1(150);
+	Account konto2(10);
+
+	
+	konto1.AccountInformation();
+	cout << "\n";
+	konto2.AccountInformation();
+
+	cout << "\n" << "TEST METODY WPLACANIA" << "\n";
+
+	
+	cout << "\n";
+	konto1.Payment(4000);
+	konto1.AccountInformation();
+	std::cout << "\n";
+	konto2.Payment(789);
+	konto2.AccountInformation();
+
+	cout << "\n" << "TEST METODY WYPLACANIA" << "\n";
+
+
+	cout << "\n";
+	konto1.Paycheck(1900);
+	konto1.AccountInformation();
+	cout << "\n";
+	konto2.Paycheck(763);
+	konto2.AccountInformation();
+
+	cout << "\n" << "TEST PRZELEWU NA KONTO" << "\n";
+
+	
+	cout << "\n";
+
+	if (konto1.Transfer(23, konto2))
+		cout << "przelew siÄ™ udaÅ‚" << "\n";
+	else
+		cout << "przelew siÄ™ nie udaÅ‚" << "\n";
+
+	konto1.AccountInformation();
+	cout << "\n";
+	konto2.AccountInformation();
+}
