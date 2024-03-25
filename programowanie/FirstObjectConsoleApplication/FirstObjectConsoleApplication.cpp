@@ -203,7 +203,7 @@ int main()
 
 	Account konto1(150);
 	Account konto2(10);
-
+	
 	
 	konto1.AccountInformation();
 	cout << "\n";
