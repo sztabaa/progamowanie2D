@@ -6,6 +6,7 @@ class C
 protected:
     int fieldA;
     string name;
+
 public:
     C()
     {
@@ -39,10 +40,10 @@ private:
 
 
 public:
-    A()
+    A():C(5,"A")
     {
-        fieldA = 5;
-        name = "A";
+        //fieldA = 5;
+        //name = "A";
     }
 
     A(int a, string n)
@@ -50,8 +51,6 @@ public:
         fieldA = a;
         name = n;
     }
-
-    //int getA()
    // {
         //return fieldA;
   //  }
@@ -60,6 +59,8 @@ public:
     {
         cout << "Informacja na temat klasy A" << "\n";
         cout << "Field A = " << fieldA<<"\n";
+
+    //int getA()
     }*/
 };
 
@@ -70,10 +71,11 @@ private:
    // int fieldA;
 
 public:
-    B()
+    B():C(5 , "B")
     {
-        fieldA = 5;
-        fieldB = 3;
+        //fieldA = 5;
+        fieldB = 4;
+        //name = "B";
     }
 
    /* int getA()
@@ -97,9 +99,11 @@ public:
 int main()
 {
     A a;
+    a.shofInfo();
 
     B b;
+    b.shofInfo(); 
 
     C c;
-    //c.shofInfo();
+    c.shofInfo();
 }
