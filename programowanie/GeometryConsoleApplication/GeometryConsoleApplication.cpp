@@ -2,60 +2,91 @@ using namespace std;
 #include <iostream>
 //napisz klasy które beda opisywac kwadrat prostok¹t i trapez
 
-class Quandrangle
+class Quadrangle
 {
 protected:
-    double sideA, sideB, sideC, sideD , height;
+    double sideA, sideB, sideC, sideD, height;
 public:
-
-};
-
-class square: public Quandrangle
-{
-protected:
-
-public:
-    square(double side)
-    {
-        sideA = sideB = sideC = sideD = side;
-       
-    }
-};
-
-class rectrangle:public Quandrangle
-{
-protected:
-
-public:
-    rectrangle(double firstSide , double secondSide)
-    {
-        sideA = sideC = firstSide;
-        height= sideB = sideD = secondSide;
-    }
-};
-
-class trapeze:public Quandrangle
-{
-protected:
-
-public:
-    trapeze(double firstSide, double secondSide , double thirdSide, double fourthSide , double h)
+    Quadrangle(double firstSide,
+        double secondSide,
+        double thirdSide,
+        double fourthSide,
+        double h)
     {
         sideA = firstSide;
         sideB = secondSide;
         sideC = thirdSide;
         sideD = fourthSide;
-        height= h;
+        height = h;
+    }
+
+    double GetPerimeter()
+    {
+        return sideA + sideB + sideC + sideD;
     }
 };
 
+class Square : public Rectangle
+{
+protected:
+
+public:
+    Square(double side) :Rectangle(side, side)
+    {
+        //height = sideA = sideB = sideC = sideD = side;
+    }
+
+    double GetArea()
+    {
+        return sideA * sideB;
+    }
+};
+
+class Rectangle : public Quadrangle
+{
+protected:
+
+public:
+    Rectangle(double firstSide, double secondSide) : Quadrangle(firstSide, secondSide, firstSide, secondSide, secondSide)
+    {
+        /* sideA = sideC = firstSide;
+         height= sideB = sideD = secondSide;*/
+    }
+
+    double GetArea()
+    {
+        return sideA * sideB;
+    }
+};
+
+class Trapeze : public Quadrangle
+{
+protected:
+
+public:
+    Trapeze(double firstSide,
+        double secondSide,
+        double thirdSide,
+        double fourthSide,
+        double h) : Quadrangle(firstSide, secondSide, thirdSide, fourthSide, h)
+    {
+        /* sideA = firstSide;
+         sideB = secondSide;
+         sideC = thirdSide;
+         sideD = fourthSide;
+         height = h;*/
+    }
+
+    double GetArea()
+    {
+        return  (sideA + sideC) * height / 2;
+    }
+};
 
 int main()
 {
-    rectrangle r(10 , 5);
-
-    square s(6);
-
-    trapeze t(10 , 6 , 4 , 5 , 3);
+    Quadrangle q(3, 2, 4, 5, 2);
+    Square s(6);
+    Rectangle r(10, 5);
+    Trapeze t(10, 6, 4, 5, 3);
 }
-
