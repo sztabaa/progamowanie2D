@@ -83,6 +83,187 @@ public:
     }
 };
 
+//*Dla poni¿szych klas u³ó¿ drzewko dziedziczenia.
+
+//zad 1
+
+class Animal //     (Zwierzê)
+{
+
+};
+
+//rodzaje
+class Mamal :public Animal // (Ssak)
+{
+
+};
+
+class Fish :public Animal // (Ryba)
+{
+
+};
+
+class Reptitle :public Animal //(Gad)
+{
+
+};
+
+class Bird :public Animal //(Ptak)
+{
+
+};
+
+
+//ptak
+class Eagle :public Bird  //(Orze³)
+{
+
+};
+
+class Sparrow :public Bird // (Wróbel)
+{
+
+};
+
+
+//ssak
+class Tiger :public Mamal //(Tygrys)
+{
+
+};
+
+class Dog :public Mamal // (Pies)
+{
+
+};
+
+class Cat :public Mamal // (Kot)
+{
+
+};
+
+class Lion :public Mamal //(Lew)
+{
+
+};
+
+//ryby
+
+class Salomon :public Fish // (£osoœ)
+{
+
+};
+
+class Trout :public Fish //(Pstr¹g)
+{
+
+};
+
+//gady
+class Snake :public Reptitle // (W¹¿)
+{
+
+};
+
+class Turtle :public Reptitle // (¯ó³w)
+{
+
+};
+
+
+//zad2
+
+class Vehicle //(Pojazd)
+{
+
+};
+
+class Motorcycle :public Vehicle  //(Motocykl)
+{
+
+};
+
+class Car :public Vehicle //(Samochód)
+{
+
+};
+
+class Truck :public Vehicle //(Ciê¿arówka)
+{
+
+};
+
+//samochód
+class Sedan :public Car //(Sedan)
+{
+
+};
+
+class SUV :public Car //(SUV)
+{
+
+};
+
+class Pick_up :public Car //(Pick-up)
+{
+
+};
+
+//ciezarówka
+
+class Semi_truck :public Truck //(Ci¹gnik siod³owy)
+{
+
+};
+
+//zad3
+
+class Electronic_Device //(Urz¹dzenie elektroniczne)
+{
+
+};
+//urzadenia
+
+class Television :public Electronic_Device // (Telewizor)
+{
+
+};
+
+class Smartphone :public Electronic_Device //(Smartfon)
+{
+
+};
+
+class Laptop :public Electronic_Device //(Laptop)
+{
+
+};
+
+//smartfony
+
+class Iphone :public Smartphone //(iPhone)
+{
+
+};
+
+class Android_device :public Smartphone //(Telefon z systemem Android)
+{
+
+};
+
+//Telewiozry
+
+class LED_TV :public Television //(Telewizor LED)
+{
+
+};
+
+class Smart_TV :public Television //(Telewizor Smart)
+{
+
+};
+
+
 int main()
 {
     Quadrangle q(3, 2, 4, 5, 2);
