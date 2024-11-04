@@ -32,6 +32,20 @@ person.Age = 77;
 
 People.Add(person);
 
+person = new Person();
+person.Name = "Paweł";
+person.Surname = "Nowak";
+person.Age = 5;
+
+People.Add(person);
+
+person = new Person();
+person.Name = "Karol";
+person.Surname = "Nowak";
+person.Age = 23;
+
+People.Add(person);
+
 #endregion
 
 Console.WriteLine("Główna kolekcja:");
@@ -68,3 +82,21 @@ Console.WriteLine();
 
 double avg=People.Average(p => p.Age);
 Console.WriteLine($"Średni wiek to: {avg} lat");
+
+Console.Clear();
+
+List<Person>sortedPeople=People.OrderBy(p => p.Surname).ThenBy(p => p.Age).ToList();
+Console.WriteLine("Kolekcja posortowana");
+foreach(Person p in sortedPeople)
+{
+    Console.WriteLine($"Imię:  {p.Name} Nazwisko:  {p.Surname} wiek: {p.Age}");
+}
+
+Console.WriteLine();
+
+List<Person>mixedPeople=People.OrderBy(p=> new Random().Next()).ToList();
+Console.WriteLine("Kolekcja posortowana losowo");
+foreach (Person p in mixedPeople)
+{
+    Console.WriteLine($"Imię:  {p.Name} Nazwisko:  {p.Surname} wiek: {p.Age}");
+}
