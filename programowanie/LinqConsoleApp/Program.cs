@@ -89,7 +89,7 @@ List<Person>sortedPeople=People.OrderBy(p => p.Surname).ThenBy(p => p.Age).ToLis
 Console.WriteLine("Kolekcja posortowana");
 foreach(Person p in sortedPeople)
 {
-    Console.WriteLine($"Imię:  {p.Name} Nazwisko:  {p.Surname} wiek: {p.Age}");
+    Console.WriteLine($"Imię:  {p.Name} Nazwisko:  {p.Surname} wiek: {p.Age}"); 
 }
 
 Console.WriteLine();
@@ -99,4 +99,26 @@ Console.WriteLine("Kolekcja posortowana losowo");
 foreach (Person p in mixedPeople)
 {
     Console.WriteLine($"Imię:  {p.Name} Nazwisko:  {p.Surname} wiek: {p.Age}");
+};
+
+Console.WriteLine();
+
+if (People.Any(p=>p.Age<18))
+{
+    Console.WriteLine("osoby są niepełnoletnie");
+};
+
+if(People.All(p=>p.Age>=18))
+{
+    Console.WriteLine("wszystkie osoby są pełnoletnie");
+};
+
+Console.WriteLine();
+
+Person firstPerson=People.FirstOrDefault(p=>p.Name.Length==3);
+
+if (firstPerson.Equals(default(Person))==false)
+    {
+    Console.WriteLine("osoba z imieniem większym niż trzy litery");
+    Console.WriteLine($"{firstPerson.Name}");
 }
