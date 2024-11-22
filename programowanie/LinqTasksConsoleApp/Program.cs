@@ -46,8 +46,40 @@ foreach(var task in taskNames)
 //zadanie6
 Console.WriteLine();
 Console.WriteLine("Znalezienie nazw zakończonych zadań posortowanych według długości nazwy");
-var endTasksFalse = tasks.OrderBy(p => p.Name.Length).ThenBy( p=> p.IsCompleted == true);
-foreach(var task in endTasksFalse)
+var endTasksFalse = tasks.Where(p => p.IsCompleted == true).OrderBy(p => p.Name.Length).Select(p=>p.Name);
+foreach(var task in endTasksFalse )
 {
     Console.WriteLine(task);
 }
+
+
+//zadanie7
+Console.WriteLine();
+Console.WriteLine(" Zadania pogrupowane według stanu zakończenia, a następnie posortowane w grupach według nazwy");
+var groupTask = tasks.OrderBy(p => p.IsCompleted).ThenBy(p => p.Name);
+foreach (var task in groupTask)
+{
+    Console.WriteLine(task);
+}
+
+//zadanie8
+Console.WriteLine();
+Console.WriteLine("Najkrótsza nazwa zadania niezakończonego");
+var shortTask = tasks.Where(p=>p.IsCompleted==false).OrderBy(p => p.Name.Length).Select(p=>p.Name).FirstOrDefault();
+Console.WriteLine(shortTask);
+
+//zadanie9
+Console.WriteLine();
+Console.WriteLine("Ilość liter w nazwach wszystkich zakończonych zadań");
+var countTask=tasks.Where(p=>p.IsCompleted==true).Select(p=>p.Name.Length).Sum();
+Console.Write(countTask);
+
+//zadanie10
+Console.WriteLine();
+Console.WriteLine("Lista zadań z indeksami (zakończone zadania z numeracją)");
+var listWithIndexTask = tasks.Where(p => p.IsCompleted).Select((p,index)=>);
+foreach (var task in listWithIndexTask)
+{
+    Console.WriteLine(task);
+}
+
