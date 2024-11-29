@@ -105,8 +105,7 @@ var groupTasks = tasks.GroupBy(t => t.IsCompleted)
     .Select(g => new { GroupVaule = g.Key, MaxName = g.OrderByDescending(t => t.Name.Length).First().Name });
 foreach (var group in groupTasks)
 {
-    Console.WriteLine($"Grupa zakończona: {group.GroupVaule}");
-    Console.WriteLine($"Najdłuższa nazwa w grupie: {group.MaxName}");
+    Console.WriteLine(group);
 }
 
 //Zadanie 12: Zlicz, ile zadań w każdej grupie zakończonych i niezakończonych zawiera słowo „the” w nazwie
@@ -116,11 +115,20 @@ var countTrueAndFalse = tasks.GroupBy(p => p.IsCompleted).Select(g => new{GroupV
 foreach(var count in countTrueAndFalse)
 {
     Console.WriteLine(count);
-
 }
 
 
 //Zadanie 13: Utwórz listę zakończonych zadań z ich numeracją oraz długością nazw
+
+Console.WriteLine();
+Console.WriteLine("Zadanie 13");
+var completedTasks = tasks.Where(t => t.IsCompleted).Select((t, index) => new{
+ TaskNumber = index + 1,  TaskName = t.Name,NameLength = t.Name.Length  });    
+foreach (var task in completedTasks)
+{
+    Console.WriteLine($"Task #{task.TaskNumber}: {task.TaskName}, Length of name: {task.NameLength}");
+}
+
 
 //Zadanie 14: Zadania posortowane według stanu zakończenia, a następnie alfabetycznie według nazw
 
