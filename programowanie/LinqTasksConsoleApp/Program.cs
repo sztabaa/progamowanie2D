@@ -109,6 +109,7 @@ foreach (var group in groupTasks)
 }
 
 //Zadanie 12: Zlicz, ile zadań w każdej grupie zakończonych i niezakończonych zawiera słowo „the” w nazwie
+Console.WriteLine();
 Console.WriteLine("Zadanie 12");
 
 var countTrueAndFalse = tasks.GroupBy(p => p.IsCompleted).Select(g => new{GroupValue=g.Key,Count= g.Where(t => t.Name.Contains("the")).Count()});
@@ -129,12 +130,21 @@ foreach (var task in completedTasks)
     Console.WriteLine($"Task #{task.TaskNumber}: {task.TaskName}, Length of name: {task.NameLength}");
 }
 
-
 //Zadanie 14: Zadania posortowane według stanu zakończenia, a następnie alfabetycznie według nazw
+Console.WriteLine();
+Console.WriteLine("Zadania posortowane według stanu zakończenia, a następnie alfabetycznie według nazw");
+var sortedTaks = tasks.OrderBy(p => p.IsCompleted).ThenBy(p => p.Name);
+foreach (var tak in sortedTaks)
+{
+    Console.WriteLine(tak);
+}
 
 //Zadanie 15: Sprawdź, czy w nazwach wszystkich zadań są co najmniej 2 różne samogłoski
-
+Console.WriteLine();
+Console.WriteLine("Zadanie 15");
 var lettersTask = tasks.All(t => t.Name.ToLower().Where(c => "aeiouy".Contains(c)).Distinct().Count() >= 2);
+Console.WriteLine(lettersTask);
 
 //Zadanie 16: Znajdź wszystkie unikalne litery używane w nazwach zadań zakończonych
-
+var uniqueLettersinTasks = tasks.Where(t => t.IsCompleted).SelectMany(t => t.Name.ToLower()).Where(c => char.IsLetter(c)).Distinct();
+Console.WriteLine(string.Join(", ", uniqueLettersinTasks));
