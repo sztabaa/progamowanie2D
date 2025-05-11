@@ -1,0 +1,17 @@
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\bin\Debug\net8.0\matura2022czerwiecConsoleApp.exe
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\bin\Debug\net8.0\matura2022czerwiecConsoleApp.deps.json
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\bin\Debug\net8.0\matura2022czerwiecConsoleApp.runtimeconfig.json
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\bin\Debug\net8.0\matura2022czerwiecConsoleApp.dll
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\bin\Debug\net8.0\matura2022czerwiecConsoleApp.pdb
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\obj\Debug\net8.0\matura2022czerwiecConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\obj\Debug\net8.0\matura2022czerwiecConsoleApp.AssemblyInfoInputs.cache
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\obj\Debug\net8.0\matura2022czerwiecConsoleApp.AssemblyInfo.cs
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\obj\Debug\net8.0\matura2022czerwiecConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\obj\Debug\net8.0\matura2022czerwiecConsoleApp.sourcelink.json
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\obj\Debug\net8.0\matura2022czerwiecConsoleApp.dll
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\obj\Debug\net8.0\refint\matura2022czerwiecConsoleApp.dll
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\obj\Debug\net8.0\matura2022czerwiecConsoleApp.pdb
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\obj\Debug\net8.0\matura2022czerwiecConsoleApp.genruntimeconfig.cache
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\obj\Debug\net8.0\ref\matura2022czerwiecConsoleApp.dll
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\bin\Debug\net8.0\liczby.txt
+C:\Users\kower\OneDrive\Dokumenty\PROGRAMOWANIE\programowanie\matura2022czerwiecConsoleApp\bin\Debug\net8.0\przyklad.txt
